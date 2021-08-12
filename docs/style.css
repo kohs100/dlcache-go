@@ -89,7 +89,7 @@ body{
     top: 50%;
     left: 4vh;
     transform: translate(0, -50%);
-    height: auto;
+    height: 100%;
     width: 56vh;
     object-fit: contain;
 }
