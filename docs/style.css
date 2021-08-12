@@ -91,6 +91,7 @@ body{
     transform: translate(0, -50%);
     height: auto;
     width: 56vh;
+    object-fit: contain;
 }
 
 #workContentContainer {
