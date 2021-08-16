@@ -1,0 +1,123 @@
+/* mainContainer grid styles */
+
+#mainContainer {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 50px 70px 50px 1fr 50px;
+}
+
+#mainContainer>div {
+    width: 100%;
+    height: 100%;
+}
+
+#searchContainer {
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+}
+
+#centerContainer {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+/* centerContainer subgrid styles */
+
+#centerContainer {
+    display: grid;
+    grid-template-columns: 50px min-content 50px auto 50px;
+    grid-template-rows: 50px 1fr 50px 80px 50px;
+}
+
+#centerContainer>div {
+    width: 100%;
+    height: 100%;
+}
+
+#imageBox {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#infoBox {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+#titleContainer {
+    grid-column: 2 / 5;
+    grid-row: 4 / 5;
+}
+
+/* infoBox subgrid styles */
+
+#infoBox {
+    display: grid;
+    grid-template-columns: 10px min-content 1fr 10px;
+    grid-template-rows: 30px min-content 1fr min-content 1fr min-content 1fr min-content 30px;
+}
+
+#infoBox > .gridEntry {
+    grid-column: 2 / 3;
+}
+
+.infoValue {
+    grid-column: 3 / 4;
+}
+
+.infoCTG {
+    grid-row: 2 / 3;
+}
+
+.infoRLS {
+    grid-row: 4 / 5;
+}
+
+.infoMKR {
+    grid-row: 6 / 7;
+}
+
+.infoPID {
+    grid-row: 8 / 9;
+}
+
+/* titleContainer subgrid styles */
+
+#titleContainer {
+    display: grid;
+    grid-template-columns: 20px min-content 1fr 20px;
+    grid-template-rows: 1fr min-content 1fr;
+}
+
+#titleContainer > .gridEntry {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#titleBox {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+/* searchContainer subgrid styles */
+
+#searchContainer {
+    display: grid;
+    grid-template-columns: 20px min-content 1fr 50px 15px;
+    grid-template-rows: 1fr min-content 1fr;
+}
+
+#searchContainer > .gridEntry {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#srchBox {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+#srchIndicator {
+    grid-column: 4 / 5;
+    grid-row: 1 / 4;
+}

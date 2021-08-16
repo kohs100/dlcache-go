@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: Roboto;
+    font-size: 20px;
+    color: white;
+}
+
+#mainContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #363636;
+}
+
+.borderBox {
+    border: 2px solid #C4C4C4;
+    border-radius: 20px;
+}
+
+.grayBox {
+    border-radius: 20px;
+    background-color: #545454;
+}
+
+#imageBox {
+    overflow: hidden;
+}
+
+#imageBox > img {
+    max-width: calc(50vw - 125px);
+    height: 100%;
+    object-position: center;
+    object-fit: contain;
+}
+
+#titleEntry {
+    text-align: center;
+    padding-right: 10px;
+    border-right: 2px solid #c4c4c4;
+}
+
+.gridEntry {
+    border-right: 2px solid #c4c4c4;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.gridValue {
+    padding-left: 10px;
+}
+
+#srchField {
+    outline: none;
+    border: none;
+    background-color: #545454;
+
+    font-size: 20px;
+    
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+
+    height: 100%;
+    width: 100%;
+
+    caret-color: #c4c4c4;
+    color: white;
+}
+
+#srchIndicator {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 38px;
+    border: #c4c4c4;
+    border-radius: 10px;
+    border: 2px solid #c4c4c4;
+    cursor: Pointer;
+}

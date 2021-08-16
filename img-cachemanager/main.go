@@ -62,6 +62,11 @@ func IsRJCode(str string) bool {
 	return err == nil
 }
 
+var CORS = map[string]string{
+	"Access-Control-Allow-Origin": "*",
+	"Content-Type":                "image/jpeg",
+}
+
 var sess *session.Session
 var svcS3 *s3.S3
 var svcDynamoDB *dynamodb.DynamoDB
@@ -165,6 +170,7 @@ func buildNotFoundError(err string) events.APIGatewayProxyResponse {
 	return events.APIGatewayProxyResponse{
 		StatusCode: 404,
 		Body:       "NotFoundError: " + err,
+		Headers:    CORS,
 	}
 }
 
@@ -172,6 +178,7 @@ func buildInternalError(err string) events.APIGatewayProxyResponse {
 	return events.APIGatewayProxyResponse{
 		StatusCode: 500,
 		Body:       "InternalError: " + err,
+		Headers:    CORS,
 	}
 }
 
@@ -181,10 +188,7 @@ func buildBlobResponse(bytes []byte) events.APIGatewayProxyResponse {
 		StatusCode:      200,
 		Body:            sEnc,
 		IsBase64Encoded: true,
-		Headers: map[string]string{
-			"Access-Control-Allow-Origin": "*",
-			"Content-Type":                "image/jpeg",
-		},
+		Headers:         CORS,
 	}
 }
 
