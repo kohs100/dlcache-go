@@ -3,7 +3,7 @@
 #mainContainer {
     display: grid;
     grid-template-columns: 50px auto 50px;
-    grid-template-rows: 50px 70px 50px 1fr 50px;
+    grid-template-rows: 50px 70px 30px 1fr 50px;
 }
 
 #mainContainer>div {
@@ -25,8 +25,8 @@
 
 #centerContainer {
     display: grid;
-    grid-template-columns: 50px min-content 50px auto 50px;
-    grid-template-rows: 50px 1fr 50px 80px 50px;
+    grid-template-columns: 30px min-content 30px auto 30px;
+    grid-template-rows: 30px 1fr 30px 60px 30px;
 }
 
 #centerContainer>div {
@@ -103,7 +103,7 @@
 
 #searchContainer {
     display: grid;
-    grid-template-columns: 20px min-content 1fr 50px 15px;
+    grid-template-columns: 20px min-content 1fr 10px 50px 15px;
     grid-template-rows: 1fr min-content 1fr;
 }
 
@@ -114,10 +114,10 @@
 
 #srchBox {
     grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-row: 1 / 4;
 }
 
 #srchIndicator {
-    grid-column: 4 / 5;
+    grid-column: 5 / 6;
     grid-row: 1 / 4;
 }
